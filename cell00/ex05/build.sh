@@ -1,9 +1,10 @@
 #! /bin/bash
-if [[ "$#" -ne 1 ]]
+if [[ "$#" -lt 1 ]]
 then
-    echo "No arguments supplied"
+	echo "No arguments supplied"
+else
+	for var in "$@"
+	do
+		mkdir "ex$var"
+	done
 fi
-for var in "$@"
-do
-    mkdir "ex$var"
-done
