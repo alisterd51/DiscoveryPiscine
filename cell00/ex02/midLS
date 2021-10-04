@@ -1,1 +1,1 @@
-ls | sed -e ':a' -e 'N;$!ba' -e 's/\n/,/g'
+ls -m
