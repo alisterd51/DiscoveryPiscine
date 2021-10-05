@@ -12,7 +12,7 @@ function	random_color()
 		color += letters[Math.floor(Math.random() * 16)];
 		i++;
 	}
-	return color;
+	return (color);
 }
 
 function	change_color()
