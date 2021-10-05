@@ -8,23 +8,33 @@ table tr td {
 	padding: 0;
 }
 
+a {
+	text-decoration: none;
+	color: white;
+}
+
 #case1 {
 	font-size: 200%;
 	font-family: Arial, Helvetica, sans-serif;
+	height: 40px;
 }
 
 #case2 {
 	color: green;
+	height: 30px;
 }
 
 #case3 {
+	height: 30px;
 }
 
 #case4 {
+	height: 30px;
 }
 
 #case5 {
 	font-size: 120%;
 	background-color: black;
 	color: white;
+	height: 40px;
 }
