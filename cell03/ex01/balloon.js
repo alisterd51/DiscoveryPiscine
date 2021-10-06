@@ -24,7 +24,7 @@ function	balloon_inflation()
 {
 	var	width;
 	var	height;
-	let	color;
+	var	color;
 
 	width = document.getElementById("balloon").offsetWidth + 10;
 	height = document.getElementById("balloon").offsetHeight + 10;
@@ -43,7 +43,7 @@ function	balloon_deflation()
 {
 	var	width;
 	var	height;
-	let	color;
+	var	color;
 
 	width = document.getElementById("balloon").offsetWidth - 5;
 	height = document.getElementById("balloon").offsetHeight - 5;
