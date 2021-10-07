@@ -1,5 +1,52 @@
+function	is_valide_value(num1, num2)
+{
+	if (Number.isInteger(num1) != false
+		|| Number.isInteger(num2) != false
+		|| parseInt(num1) < 0
+		|| parseInt(num2) < 0)
+		return (false);
+	else
+		return (true);
+}
+
+function	calculation()
+{
+	var	operator;
+	var	num1;
+	var	num2;
+
+	operator = document.querySelector('#operator').value;
+	num1 = document.getElementById("num1").value;
+	num2 = document.getElementById("num2").value;
+	if (is_valide_value(num1, num2) == false)
+		return ("Error :(");
+	num1 = parseInt(num1);
+	num2 = parseInt(num2);
+	if ((operator == "divide" || operator == "modulo") && num2 == 0)
+		return ("It’s over 9000!");
+	if (operator == "add")
+		return (num1 + num2);
+	else if (operator == "subtract")
+		return (num1 - num2);
+	else if (operator == "multiply")
+		return (num1 * num2);
+	else if (operator == "divide")
+		return (num1 / num2);
+	else if (operator == "modulo")
+		return (num1 % num2);
+	else
+		return ("Error :(");
+}
+
 function	solve()
 {
-	console.log("test");
-	document.getElementById("result").innerHTML = "hello";
+	var	result;
+
+	result = calculation();
+	if (result == "It’s over 9000!")
+		alert("It’s over 9000!");
+	else if (isNaN(result))
+		result = "Error :("
+	console.log(result);
+	document.getElementById("result").innerHTML = result;
 }
