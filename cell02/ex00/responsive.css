@@ -1,18 +1,22 @@
-html, body {
-	height: 98%;
-}
-.left_cell {
-	background-color: #C3C682;
-	border-right: 1px solid grey;
-}
-.right_cell {
-	background-color: #F8C4B1;
+html, body, table, tr, td {
+	padding: 0;
+	margin: 0;
 }
 .border {
-	border-width: 1px;
-	border-color: black;
-	border-style: solid;
-	border-spacing: 0px;
-	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid black;
 	height: 100%;
+	width: 100%;
+}
+.leftside, .rightside {
+	border-collapse: collapse;
+	height: 100vh;
+	width: 50%;
+}
+.leftside {
+	border-right: 1px solid grey;
+	background: #C3C682;
+}
+.rightside {
+	background: #F8C4B1;
 }
