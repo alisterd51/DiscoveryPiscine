@@ -1,9 +1,9 @@
 function	is_valide_value(num1, num2)
 {
 	if (Number.isInteger(num1) != false
-		|| Number.isInteger(num2) != false
-		|| parseInt(num1) < 0
-		|| parseInt(num2) < 0)
+			|| Number.isInteger(num2) != false
+			|| parseInt(num1) < 0
+			|| parseInt(num2) < 0)
 		return (false);
 	else
 		return (true);
@@ -22,6 +22,8 @@ function	calculation()
 		return ("Error :(");
 	num1 = parseInt(num1);
 	num2 = parseInt(num2);
+	if (isNaN(num1) || isNaN(num2))
+		return ("Error :(");
 	if ((operator == "divide" || operator == "modulo") && num2 == 0)
 		return ("It’s over 9000!");
 	if (operator == "add")
@@ -43,10 +45,13 @@ function	solve()
 	var	result;
 
 	result = calculation();
-	if (result == "It’s over 9000!")
-		alert("It’s over 9000!");
-	else if (isNaN(result))
-		result = "Error :("
+	alert(result);
 	console.log(result);
-	document.getElementById("result").innerHTML = result;
 }
+
+function	spam()
+{
+	alert("Please, use me...");
+}
+
+setInterval(spam, 30000)
